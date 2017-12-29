@@ -1,0 +1,28 @@
+{
+  "name": "houseapi",
+  "version": "0.0.1",
+  "description": "Example API to showcase Node.js + Express workflow Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gricha2380/houseAPI.git"
+  },
+  "keywords": [
+    "node.js",
+    "express.js"
+  ],
+  "author": "Gregor Richardson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gricha2380/houseAPI/issues"
+  },
+  "homepage": "https://github.com/gricha2380/houseAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.3"
+  }
+}
