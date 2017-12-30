@@ -9,9 +9,14 @@ app.use(express.static('./public')); // tell server which directory to serve fil
 
 // Set up a route to send a message
 app.get('/', (request, response) => {
-    response.send('<h1>This will show up in the browser</h1>');
+    response.json({message: 'This is our response.'});
     console.log('This will show up in Node terminal window');
 });
+
+// Set up a route to send a file
+app.get('/house', (req, res) => {
+    res.sendFile('modelHouse.html', {root: './public'});
+})
 
 // Start the app so it listens for changes
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
