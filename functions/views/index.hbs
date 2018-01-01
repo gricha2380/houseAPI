@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>This is a page about houses</title>
+    <title>All Houses</title>
 </head>
 <body>
-    <h1>About a house.</h1>
+    <h1>List of Houses</h1>
+    <ul>
+        {{#each house}}
+        <li><b>{{name}}</b> <br>{{address}} <br>color: {{color}}<br>rooms: {{rooms}}</li>
+        {{/each}}
+    </ul>
 </body>
 </html>
