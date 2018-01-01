@@ -72,10 +72,13 @@ app.post('/new', (request, response) => {
     response.send(`${name} house created`)
 });
 
+app.get('/new', (request, response) => {
+    console.log("serving new house HTML page")
+    response.sendFile('add.html', {root: '../public'});
+});
 
-app.post('/new', (request, response) => {
-    console.log("serving new book HTML page")
-    
+app.get('/index', (request, response) => {
+    resp.sendFile('index.html', {root: '../public'});
 });
 
 app.get('/hello', (request, response) => {
@@ -93,12 +96,12 @@ app.get('/timestamp', (request, response) => {
 
 app.get('*', (request, response) => {
     console.log('unknown route request');
-    response.message('Sorry, unknown route.');
+    response.send('Sorry, unknown route.');
 });
 
 app.post('*', (request, response) => {
     console.log('unknown post route request');
-    response.message('Sorry, unknown post route.');
+    response.send('Sorry, unknown post route.');
 });
 //app.get('*', (req, res) => res.redirect(CLIENT_URL)); // listen for all routes, send to homepage
 
